@@ -105,3 +105,30 @@ const page2: Page = {
 console.log(page1)
 console.log(page2)
 console.log("first")
+
+class House {
+  
+  private tenants: string[] = [];
+  constructor(private type: string,public street: string) {
+    
+  }
+  public showAddress(): void { 
+    console.log("Address: " + this.street)
+  }
+
+    public showType(): void { 
+    console.log("Type: " + this.type)
+  }
+  public addTenants(name: string) {
+    this.tenants.push(name);
+  }
+  public showTenants() {
+console.log(this.tenants)
+   }
+}
+
+const house = new House("wood","middle-earth")
+
+house.addTenants("Max")
+house.addTenants("Alex")
+house.showTenants()
